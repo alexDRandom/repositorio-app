@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quinque - Consultoría</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333333;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #FF9800;
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+        }
+
+        .loader {
+            display: none;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .loader img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .loading-text {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        function showLoader() {
+            document.getElementById("loader").style.display = "block";
+            document.getElementById("form").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Quinque - Consultoría</h1>
+        <form id="form" action="/local/" method="GET" onsubmit="showLoader()">
+            <label for="local-input">Local:</label>
+            <input type="text" id="local-input" name="local_name" required>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="loader" class="loader">
+            <img src="/static/imgs/duck.gif" alt="Cargando">
+            <div class="loading-text">Procesando la solicitud...</div>
+        </div>
+    </div>
+</body>
+</html>

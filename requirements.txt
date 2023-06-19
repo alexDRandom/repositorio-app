@@ -1,0 +1,6 @@
+fastapi
+scikit-learn
+numpy
+jsonlines
+scipy
+jinja2
