@@ -4,3 +4,4 @@ numpy
 jsonlines
 scipy
 jinja2
+uvicorn
